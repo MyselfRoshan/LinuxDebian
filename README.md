@@ -3,7 +3,7 @@
 ## Install Firefox Developer Edition Browser
 
 `Step 1` : Go to *https://www.mozilla.org/en-US/firefox/developer/* and click on **Firefox Developer Edition** button
-[](/Screenshot_20230224_225204.png)
+![](/Screenshot_20230224_225204.png)
 
 `Step 2` : Open a terminal and install some dependencies before installing the browser using the following command:
 
