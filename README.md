@@ -1,9 +1,21 @@
+<style>
+button{
+    padding:10px 24px;
+    font-weight:bold;
+    color:hsl(36, 12.2%, 92%);
+    background-color:hsl(215.8, 100%, 29.6%);
+    border:none;
+    border-radius:5px;
+}
+</style>
+
 # LinuxDebian
 
 ## Install Firefox Developer Edition Browser
 
-`Step 1` : Go to *https://www.mozilla.org/en-US/firefox/developer/* and click on **Firefox Developer Edition** button
-![](/Screenshot_20230224_225204.png)
+`Step 1` : Go to *https://www.mozilla.org/en-US/firefox/developer/* and click on <button>Firefox Developer Edition</button> button to download **.tar.bz2** file
+
+![](/browser.png)
 
 `Step 2` : Open a terminal and install some dependencies before installing the browser using the following command:
 
@@ -23,7 +35,7 @@ $ cd Downloads
 $ sudo tar xjf firefox-*.tar.bz2 -C /opt
 ```
 
-_`Note: Above command will extract all files from firefox-*.tar.bz2 ti the /opt/firefox directory.`_
+_`Note: Above command will extract all files from firefox-*.tar.bz2 to the /opt/firefox directory.`_
 
 `Step 5` : Run the following command to install a soft link of `firefox` file under `/usr/local/bin/` directory, so it will be accessible from anywhere the system:
 
