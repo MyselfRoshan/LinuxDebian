@@ -1,19 +1,8 @@
-<style>
-button{
-    padding:10px 24px;
-    font-weight:bold;
-    color:hsl(36, 12.2%, 92%);
-    background-color:hsl(215.8, 100%, 29.6%);
-    border:none;
-    border-radius:5px;
-}
-</style>
-
 # LinuxDebian
 
 ## Install Firefox Developer Edition Browser
 
-`Step 1` : Go to *https://www.mozilla.org/en-US/firefox/developer/* and click on <button>Firefox Developer Edition</button> button to download **.tar.bz2** file
+`Step 1` : Go to *https://www.mozilla.org/en-US/firefox/developer/* and click on Firefox Developer Edition button to download **.tar.bz2** file
 
 ![](/browser.png)
 
