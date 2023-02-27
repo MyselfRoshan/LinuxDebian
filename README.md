@@ -29,7 +29,7 @@ _`Note: Above command will extract all files from firefox-*.tar.bz2 to the /opt/
 `Step 5` : Run the following command to install a soft link of `firefox` file under `/usr/local/bin/` directory, so it will be accessible from anywhere the system:
 
 ```shell
-$ ln -s /opt/firefox/firefox /usr/local/bin/firefox-developer
+$ sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox-developer
 ```
 
 _`Note: You can use use any name instead of firefox-developer like firefox-dev`_
@@ -37,5 +37,5 @@ _`Note: You can use use any name instead of firefox-developer like firefox-dev`_
 `Step 5` : Start **Firefox Developer Edition** from the terminal by running the following command:
 
 ```shell
-$ firefox-developer
+$ sudo firefox-developer
 ```
