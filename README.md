@@ -36,18 +36,18 @@ _`Note: You can use use any name instead of firefox-developer like firefox-dev`_
 
 `Step 5` : Start **Firefox Developer Edition** from the terminal by running the following command:
 
-```shell
+```Shell
 $ sudo firefox-developer
 ```
 
 `Step 6` : Create an GUI executable to start **Firefox Developer Edition** from Application Launcher, Search, etc. by using following commands:
 
-```shell
+```Shell
 $ sudo vim home/<User Name>/.local/share/applications/firefox_developer.desktop
 ```
 
 Copy and paste the following text:
-```vim
+```desktop
 [Desktop Entry]
 Name=Firefox Stable
 Comment=Web Browser
