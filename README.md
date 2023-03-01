@@ -68,3 +68,4 @@ Name=Open in New Window
 Exec=/opt/firefox/firefox --private-window %u
 Name=Open in Private Window
 ```
+## Install nala better alternative to apt and apt-get
