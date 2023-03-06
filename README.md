@@ -74,3 +74,4 @@ Name=Open in Private Window
 ## Install docker
 ## Install File light
 ## Install kitty or Alacrity
+## Install wayland
