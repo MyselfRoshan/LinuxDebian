@@ -74,4 +74,4 @@ Name=Open in Private Window
 ## Install docker
 ## Install File light
 ## Install kitty or Alacrity
-## Install wayland
+## Install wayland with weston or sway for tile layout
