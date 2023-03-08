@@ -75,3 +75,4 @@ Name=Open in Private Window
 ## Install File light
 ## Install kitty or Alacrity
 ## Install wayland with weston or sway for tile layout
+## Install bspwm window manager
