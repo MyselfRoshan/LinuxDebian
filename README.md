@@ -76,3 +76,5 @@ Name=Open in Private Window
 ## Install kitty or Alacrity
 ## Install wayland with weston or sway for tile layout
 ## Install bspwm window manager
+## Install with xcfce lightweight desktop environment
+## change /etc/apt/sources.list from bulleye to sid
