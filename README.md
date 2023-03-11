@@ -132,51 +132,51 @@ $ sudo isenkram-autoinstall-firmware
 
 ## Install Firefox Developer Edition Browser
 
-`Step 1` : Go to *https://www.mozilla.org/en-US/firefox/developer/* and click on Firefox Developer Edition button to download **.tar.bz2** file
+- Click [here](https://www.mozilla.org/en-US/firefox/developer/) to visit **'Firefox Developer Edition'** download page and click on Firefox Developer Edition button to download **'.tar.bz2'** file.
 
 ![](/browser.png)
 
-`Step 2` : Open a terminal and install some dependencies before installing the browser using the following command:
+- Install some dependencies for browser to work properly run the following command:
 
 ```shell
-$ sudo apt-get install libgtk2.0-0 libasound2 libdbus-glib-1-2
+$ sudo nala install libgtk2.0-0 libasound2 libdbus-glib-1-2
 ```
 
-`Step 3` : Use the following command to navigate to the **Downloads** directory:
+- Navigate to the **'Downloads'** directory :
 
 ```shell
 $ cd Downloads
 ```
 
-`Step 4` : Run the following command to install **Firefox Developer Edition**:
+- Install **'Firefox Developer Edition'** browser with the following command:
 
 ```shell
 $ sudo tar xjf firefox-*.tar.bz2 -C /opt
 ```
 
-_`Note: Above command will extract all files from firefox-*.tar.bz2 to the /opt/firefox directory.`_
+> Note: Above command will extract all files from firefox-\*.tar.bz2 to the /opt/firefox directory.
 
-`Step 5` : Run the following command to install a soft link of `firefox` file under `/usr/local/bin/` directory, so it will be accessible from anywhere the system:
+- Create a soft link or symlink of **'firefox'** file under **'/usr/local/bin/'** directory, so it will be accessible from anywhere the system:
 
 ```shell
 $ sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox-developer
 ```
 
-_`Note: You can use use any name instead of firefox-developer like firefox-dev`_
+> Note: You can use use any name instead of **firefox-developer** like **firefox-dev**
 
-`Step 5` : Start **Firefox Developer Edition** from the terminal by running the following command:
+- Start **'Firefox Developer Edition'** from the terminal by running the following command:
 
 ```Shell
 $ sudo firefox-developer
 ```
 
-`Step 6` : Create an GUI executable to start **Firefox Developer Edition** from Application Launcher, Search, etc. by using following commands:
+- Create an GUI executable to start **Firefox Developer Edition** from Application Launcher, Search, etc. :
 
 ```Shell
-$ sudo vim home/<User Name>/.local/share/applications/firefox_developer.desktop
+$ sudo nano home/<User Name>/.local/share/applications/firefox_developer.desktop
 ```
 
-Copy and paste the following text:
+> ### Copy and paste the following text:
 
 ```desktop
 [Desktop Entry]
@@ -199,8 +199,6 @@ Name=Open in New Window
 Exec=/opt/firefox/firefox --private-window %u
 Name=Open in Private Window
 ```
-
-## Install nala better alternative to apt and apt-get
 
 ## Install nix best package manager
 
