@@ -29,7 +29,7 @@ $ sudo link set wlp2s0b1 up
 $ sudo nano /etc/network/interfaces
 ```
 
-- Copy and paste the following text at the end of the file and replace ESSID with your `wifi name` and PASSWORD with your `wifi password`
+- Copy and paste the following text at the end of the file and replace ESSID with your **'wifi name'** and PASSWORD with your **'wifi password'**
 
 ```nano
 # my wifi device
