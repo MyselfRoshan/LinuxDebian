@@ -77,7 +77,7 @@ deb http://deb.debian.org/debian bullseye-updates main
 deb-src http://deb.debian.org/debian bullseye-updates main
 ```
 
-> ### Change the fist and second **'bulleye'** to **'sid'** as shown below:
+> ### Change the fist and second 'bulleye' to 'sid' as shown below:
 
 ```nano
 deb http://deb.debian.org/debian sid main
@@ -100,7 +100,7 @@ $ sudo apt update && sudo apt upgrade
 
 ---
 
-## Install **'nala'** better **'apt'** front-end
+## Install 'nala' better 'apt' front-end
 
 - When it come to installing packages from apt it is a mess. When you are installing packages nala provides a better interfaces while installing packages. So it is my prefered way. I recommend nala to everyone. To install nala in debian use the following command:
 
@@ -108,7 +108,7 @@ $ sudo apt update && sudo apt upgrade
 $ sudo apt install nala
 ```
 
-> Note: If nala isn't installed from the above method. Chick [here](https://gitlab.com/volian/nala/-/wikis/Installation) to vist nala official install wiki.
+> Note: If nala isn't installed from the above method. Click [here](https://gitlab.com/volian/nala/-/wikis/Installation) to vist nala official install wiki.
 
 ---
 
