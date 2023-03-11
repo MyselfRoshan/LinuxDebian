@@ -87,7 +87,7 @@ deb http://deb.debian.org/debian bullseye-updates main
 deb-src http://deb.debian.org/debian bullseye-updates main
 ```
 
-> Note : If you wnat different **'soure.list'** configuration visit [here](https://wiki.debian.org/SourcesList).
+> Note : If you want different **'soure.list'** configuration visit [here](https://wiki.debian.org/SourcesList).
 
 - After changing the source list **'update'** and **'upgrade'** your system :
 
