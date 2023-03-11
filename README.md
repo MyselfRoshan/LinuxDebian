@@ -170,7 +170,7 @@ $ sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox-developer
 $ sudo firefox-developer
 ```
 
-- Create an GUI executable to start **Firefox Developer Edition** from Application Launcher, Search, etc. :
+- Create an GUI executable to start **'Firefox Developer Edition'** from Application Launcher, Search, etc. :
 
 ```Shell
 $ sudo nano home/<User Name>/.local/share/applications/firefox_developer.desktop
