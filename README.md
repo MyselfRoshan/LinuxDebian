@@ -14,6 +14,8 @@
 
 ---
 
+> ## Note: If you have ethernet connected for internet connection jump to next step [here](#change-apt-package-source).
+
 ## Connect to wifi from command line
 
 - Show all the available network interface
