@@ -4,7 +4,10 @@
 
 - [Connect to wifi from command line](#connect-to-wifi-from-command-line)
 - [Change apt package source](#change-apt-package-source)
+- [Nala apt front-end for Linux](#install-nala-better-apt-front-end)
 - [Automatically download all firmware packages](#automatically-download-all-the-required-firmware-packages)
+
+---
 
 ## Connect to wifi from command line
 
@@ -94,6 +97,18 @@ deb-src http://deb.debian.org/debian bullseye-updates main
 ```shell
 $ sudo apt update && sudo apt upgrade
 ```
+
+---
+
+## Install **'nala'** better **'apt'** front-end
+
+- When it come to installing packages from apt it is a mess. When you are installing packages nala provides a better interfaces while installing packages. So it is my prefered way. I recommend nala to everyone. To install nala in debian use the following command:
+
+```shell
+$ sudo apt install nala
+```
+
+> Note: If nala isn't installed from the above method. Chick [here](https://gitlab.com/volian/nala/-/wikis/Installation) to vist nala official install wiki.
 
 ---
 
