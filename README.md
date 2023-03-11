@@ -1,5 +1,37 @@
 # LinuxDebian
 
+## Connect to wifi from command line
+
+- Show all the available network interface
+```shell
+$ ip a
+```
+
+- Set the wireless interface up which start with wlpxxx since mine is wlsps0b1, the command is:
+```shell
+$ sudo link set wlp2s0b1 up
+```
+
+- Edit the interfaces with your favourite text editor like vim, nano, etc. Since I am familier with nano for my setup.
+```shell
+$ sudo nano /etc/network/interfaces
+```
+
+- Copy and paste the following text at the end of the file and replace ESSID with your `wifi name` and PASSWORD with your `wifi password` 
+```nano
+# my wifi device
+allow-hotplug wlp2s0b1
+iface wlp2s0b1 inet dhcp
+  wpa-ssid ESSID #wifi name/essid
+  wps-psk PASSWORD #wifi password
+```
+
+- Bring up your interface and verify connection :
+```shell
+$ sudo ifup wlp2s0b1
+$ ip a #To view if wlp2s0b1 is UP or DOWN
+```
+
 ## Install Firefox Developer Edition Browser
 
 `Step 1` : Go to *https://www.mozilla.org/en-US/firefox/developer/* and click on Firefox Developer Edition button to download **.tar.bz2** file
