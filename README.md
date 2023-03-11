@@ -4,6 +4,7 @@
 
 - [Connect to wifi from command line](#connect-to-wifi-from-command-line)
 - [Change apt package source](#change-apt-package-source)
+- [Automatically download all firmware packages](#automatically-download-all-the-required-firmware-packages)
 
 ## Connect to wifi from command line
 
@@ -91,8 +92,26 @@ deb-src http://deb.debian.org/debian bullseye-updates main
 - After changing the source list **'update'** and **'upgrade'** your system :
 
 ```shell
-$sudo apt update && sudo apt upgrade
+$ sudo apt update && sudo apt upgrade
 ```
+
+---
+
+## Automatically download all the required firmware packages
+
+- It is rather simple to download all the **'reqired'** and **'missing'** firmware packages inside Debian. For this we need to install **isenkram-cli** package.
+
+```shell
+$ sudo nala install isenkram-cli
+```
+
+- To install missing **'reqired'** and **'missing'** firmware packages run the following command:
+
+```shell
+$ sudo isenkram-autoinstall-firmware
+```
+
+> For more details visit [here](https://www.debian.org/releases/stable/i386/ch06s04.en.html).
 
 ---
 
