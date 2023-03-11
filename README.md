@@ -2,10 +2,15 @@
 
 ## Table Of Contents
 
+- [Installing debian without any desktop environment](#installing-debian-without-any-desktop-environment)
 - [Connect to wifi from command line](#connect-to-wifi-from-command-line)
 - [Change apt package source](#change-apt-package-source)
 - [Nala apt front-end for Linux](#install-nala-better-apt-front-end)
 - [Automatically download all firmware packages](#automatically-download-all-the-required-firmware-packages)
+
+---
+
+## Installing Debian without any Desktop Environment
 
 ---
 
