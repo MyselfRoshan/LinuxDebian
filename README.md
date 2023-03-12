@@ -14,7 +14,7 @@
 
 ---
 
-> ## Note: If you have ethernet connected for internet connection jump to next step [here](#change-apt-package-source).
+> ### Note: If you have ethernet connected for internet connection jump to next step [here](#change-apt-package-source).
 
 ## Connect to wifi from command line
 
@@ -53,7 +53,7 @@ $ sudo ifup wlp2s0b1
 $ ip a #To view if wlp2s0b1 is UP or DOWN
 ```
 
-> If this method doesn't work visit official wiki [here](https://wiki.debian.org/WiFi/HowToUse).
+> Note: If this method doesn't work visit official wiki [here](https://wiki.debian.org/WiFi/HowToUse).
 
 ---
 
