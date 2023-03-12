@@ -7,6 +7,7 @@
 - [Change apt package source](#change-apt-package-source)
 - [Nala apt front-end for Linux](#install-nala-better-apt-front-end)
 - [Automatically download all firmware packages](#automatically-download-all-the-required-firmware-packages)
+- [Fix Grub dual boot problem](#fix-grub-dual-boot-problem)
 
 ---
 
@@ -27,7 +28,7 @@ $ ip a
 - Set the wireless interface up which start with wlpxxx since mine is wlsps0b1, the command is:
 
 ```shell
-$ sudo link set wlp2s0b1 up
+$ sudo ip link set wlp2s0b1 up
 ```
 
 - Edit the interfaces with your favourite text editor like vim, nano, etc. Since I am familier with nano for my setup.
@@ -207,7 +208,31 @@ Name=Open in New Window
 [Desktop Action Private]
 Exec=/opt/firefox/firefox --private-window %u
 Name=Open in Private Window
+
 ```
+
+## Fix Grub dual boot problem
+
+- This problem occurs when you update and upgrade you system. A simple way to fix this is by following given commands:
+
+```shell
+$ sudo nano /etc/default/grub
+```
+
+- Search and uncomment the following line :
+
+```nano
+GRUB_DISABLE_OS_PROBER=false
+```
+
+- Run the following command to enable **'os prober'** and **'update grub'**
+
+```shell
+$ sudo os-prober
+$ sudo update-grub
+```
+
+---
 
 ## Install nix best package manager
 
