@@ -143,7 +143,7 @@ $ sudo isenkram-autoinstall-firmware
 
 ## Fix Grub dual boot problem
 
-- This problem occurs when you update and upgrade you system. A simple way to fix this is by following given commands:
+- This problem occurs when you update and upgrade your system. A simple way to fix this is by following given commands:
 
 ```shell
 $ sudo nano /etc/default/grub
@@ -237,6 +237,12 @@ Name=Open in Private Window
 
 ---
 
+## Install wayland with weston or sway for tile layout
+
+- Visit [here](https://blog.aktsbot.in/swaywm-on-debian-11.html) to setup sway in debian.
+
+---
+
 ## Install nix best package manager
 
 ## Install QEMEU instead of virtuax box
@@ -246,8 +252,6 @@ Name=Open in Private Window
 ## Install File light
 
 ## Install kitty or Alacrity
-
-## Install wayland with weston or sway for tile layout
 
 ## Install bspwm window manager
 
