@@ -53,6 +53,8 @@ $ sudo ifup wlp2s0b1
 $ ip a #To view if wlp2s0b1 is UP or DOWN
 ```
 
+> If this method doesn't work visit official wiki [here](https://wiki.debian.org/WiFi/HowToUse).
+
 ---
 
 ## Change apt package source
