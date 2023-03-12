@@ -8,6 +8,7 @@
 - [Nala apt front-end for Linux](#install-nala-better-apt-front-end)
 - [Automatically download all firmware packages](#automatically-download-all-the-required-firmware-packages)
 - [Fix Grub dual boot problem](#fix-grub-dual-boot-problem)
+- [Install Firefox Developer Edition Browser](#install-firefox-developer-edition-browser)
 
 ---
 
@@ -140,6 +141,29 @@ $ sudo isenkram-autoinstall-firmware
 
 ---
 
+## Fix Grub dual boot problem
+
+- This problem occurs when you update and upgrade you system. A simple way to fix this is by following given commands:
+
+```shell
+$ sudo nano /etc/default/grub
+```
+
+- Search and uncomment the following line :
+
+```nano
+GRUB_DISABLE_OS_PROBER=false
+```
+
+- Run the following command to enable **'os prober'** and **'update grub'**. This will automatically detect your another operating system.
+
+```shell
+$ sudo os-prober
+$ sudo update-grub
+```
+
+---
+
 ## Install Firefox Developer Edition Browser
 
 - Click [here](https://www.mozilla.org/en-US/firefox/developer/) to visit **'Firefox Developer Edition'** download page and click on Firefox Developer Edition button to download **'.tar.bz2'** file.
@@ -209,27 +233,6 @@ Name=Open in New Window
 Exec=/opt/firefox/firefox --private-window %u
 Name=Open in Private Window
 
-```
-
-## Fix Grub dual boot problem
-
-- This problem occurs when you update and upgrade you system. A simple way to fix this is by following given commands:
-
-```shell
-$ sudo nano /etc/default/grub
-```
-
-- Search and uncomment the following line :
-
-```nano
-GRUB_DISABLE_OS_PROBER=false
-```
-
-- Run the following command to enable **'os prober'** and **'update grub'**
-
-```shell
-$ sudo os-prober
-$ sudo update-grub
 ```
 
 ---
