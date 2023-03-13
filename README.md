@@ -26,6 +26,12 @@
 $ ip a
 ```
 
+- Show your wireless network interface
+
+```shell
+$ sudo iw dev
+```
+
 - Set the wireless interface up which start with wlpxxx since mine is wlsps0b1, the command is:
 
 ```shell
@@ -45,7 +51,7 @@ $ sudo nano /etc/network/interfaces
 allow-hotplug wlp2s0b1
 iface wlp2s0b1 inet dhcp
   wpa-ssid ESSID #wifi name/essid
-  wps-psk PASSWORD #wifi password
+  wpa-psk PASSWORD #wifi password
 ```
 
 - Bring up your interface and verify connection :
