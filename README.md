@@ -249,6 +249,12 @@ Name=Open in Private Window
 
 ---
 
+## Install bspwm window manager with rofi
+
+- Visit CTT [here](https://github.com/ChrisTitusTech/Debian-titus) to setup bspwm with rofi.
+
+---
+
 ## Install nix best package manager
 
 ## Install QEMEU instead of virtuax box
@@ -258,7 +264,5 @@ Name=Open in Private Window
 ## Install File light
 
 ## Install kitty or Alacrity
-
-## Install bspwm window manager
 
 ## Install with xcfce lightweight desktop environment
