@@ -252,17 +252,20 @@ Name=Open in Private Window
 ## Install bspwm window manager with rofi
 
 - Visit CTT [here](https://github.com/ChrisTitusTech/Debian-titus) to setup bspwm with rofi.
+- Customize rofi [here](https://github.com/adi1090x/rofi).
 
 ---
+
+## Install bpytop real tme cli system monitor and neofetch important system information
 
 ## Install nix best package manager
 
 ## Install QEMEU instead of virtuax box
 
-## Install docker
+## Install docker and docker compose, portainor
 
 ## Install File light
 
-## Install kitty or Alacrity
+## Install kitty or alacrity
 
 ## Install with xcfce lightweight desktop environment
