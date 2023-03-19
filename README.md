@@ -268,10 +268,45 @@ Name=Open in Private Window
 
 ## Install with xcfce lightweight desktop environment hi
 
-## Uncompress .tar.gz and .tar.bz2 files
+## Uncompress common linux file types
+
+> ## Note: We will learn to uncompress common linux files like .tar, .tar.gz and .tar.bz2
+
+- To uncompress .tar file use one of the following commands :
+  > Copy in same working directory
+
+```bash
+$ tar -xf <filename>.tar
+```
+
+> Copy to a destination directory
+
+```bash
+$ tar -xf <filename>.tar -C /path/to/destination/directory
+```
 
 - To uncompress .tar.gz file use one of the following commands :
+  > Copy in same working directory
 
 ```bash
 $ tar -xzvf <filename>.tar.gz
+```
+
+> Copy to a destination directory
+
+```bash
+$ tar -xzvf <filename>.tar.gz -C /path/to/destination/directory
+```
+
+- To uncompress .tar.bz2 file use one of the following commands :
+  > Copy in same working directory
+
+```bash
+$ tar -xjvf <filename>.tar.bz2
+```
+
+> Copy to a destination directory
+
+```bash
+$ tar -xjvf <filename>.tar.bz2 -C /path/to/destination/directory
 ```
