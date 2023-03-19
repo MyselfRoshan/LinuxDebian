@@ -266,6 +266,12 @@ Name=Open in Private Window
 
 ## Install File light
 
-## Install kitty or alacrity
+## Install with xcfce lightweight desktop environment hi
 
-## Install with xcfce lightweight desktop environment
+## Uncompress .tar.gz and .tar.bz2 files
+
+- To uncompress .tar.gz file use one of the following commands :
+
+```bash
+$ tar -xzvf <filename>.tar.gz
+```
