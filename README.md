@@ -275,38 +275,38 @@ Name=Open in Private Window
 - To uncompress .tar file use one of the following commands :
   > Copy in same working directory
 
-```bash
+```shell
 $ tar -xf <filename>.tar
 ```
 
 > Copy to a destination directory
 
-```bash
+```shell
 $ tar -xf <filename>.tar -C /path/to/destination/directory
 ```
 
 - To uncompress .tar.gz file use one of the following commands :
   > Copy in same working directory
 
-```bash
+```shell
 $ tar -xzvf <filename>.tar.gz
 ```
 
 > Copy to a destination directory
 
-```bash
+```shell
 $ tar -xzvf <filename>.tar.gz -C /path/to/destination/directory
 ```
 
 - To uncompress .tar.bz2 file use one of the following commands :
   > Copy in same working directory
 
-```bash
+```shell
 $ tar -xjvf <filename>.tar.bz2
 ```
 
 > Copy to a destination directory
 
-```bash
+```shell
 $ tar -xjvf <filename>.tar.bz2 -C /path/to/destination/directory
 ```
