@@ -268,6 +268,12 @@ Name=Open in Private Window
 
 ## Install with xcfce lightweight desktop environment hi
 
+## Some Linux Commands
+
+blkid
+whoami
+fdisk
+
 ## Uncompress common linux file types
 
 > ## Note: We will learn to uncompress common linux files like .tar, .tar.gz and .tar.bz2
