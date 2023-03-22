@@ -266,7 +266,12 @@ Name=Open in Private Window
 
 ## Install File light
 
-## Install with xcfce lightweight desktop environment hi
+## Install with xcfce lightweight desktop environment
+
+bpytop - Cli Based system monitor
+reshift-gtk - Equivalent to f.lux in windows
+neofetch - shows system information
+Install Material-Black-Pistachio-2.9.3 theme
 
 ## Some Linux Commands
 
