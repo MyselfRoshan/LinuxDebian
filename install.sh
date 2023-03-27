@@ -40,6 +40,7 @@ mv /home/$username/.config/sddm.conf /etc/sddm.conf
 
 # Installing material-black-pistachio
 unzip Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
+
 # Installing sugar-candy dependencies
 nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 # Installing Essential Programs
