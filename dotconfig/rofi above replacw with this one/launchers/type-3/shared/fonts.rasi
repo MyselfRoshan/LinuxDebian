@@ -1,0 +1,14 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ *
+ * Fonts
+ *
+ **/
+
+* {
+    // font: "DejaVu Sans 10";
+    font: "Font Awesome 6 Brands 9";
+    // font: "Z003 Bold Italic 13";
+}

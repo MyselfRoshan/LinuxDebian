@@ -63,6 +63,8 @@ $ ip a #To view if wlp2s0b1 is UP or DOWN
 
 > Note: If this method doesn't work visit official wiki [here](https://wiki.debian.org/WiFi/HowToUse).
 
+## Install NetworkManager
+
 ---
 
 ## Change apt package source
@@ -174,7 +176,7 @@ $ sudo update-grub
 
 - Click [here](https://www.mozilla.org/en-US/firefox/developer/) to visit **'Firefox Developer Edition'** download page and click on Firefox Developer Edition button to download **'.tar.bz2'** file.
 
-![](/browser.png)
+![](images/browser.png)
 
 - Install some dependencies for browser to work properly run the following command:
 
