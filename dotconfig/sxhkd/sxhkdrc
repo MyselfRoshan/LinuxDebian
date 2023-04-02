@@ -20,6 +20,12 @@ super + b
 super + shift + b
 	brave-browser --incognito
 
+super + alt + b
+	firefox-developer
+
+super + alt + shift + b
+	firefox-developer --private-window
+
 Print
 	flameshot full -p /media/roshan/windows/Pictures/Screenshots/
 
@@ -54,13 +60,19 @@ super + g
 
 super + e
 	thunar
+
+super + v
+	xfce4-popup-clipman
 #
 # state/flags
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {shift + t,s}
+	bspc node -t {pseudo_tiled,floating}
+
+super + f
+	bspc node -t {fullscreen,tiled}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -88,7 +100,7 @@ super + bracket{left,right}
 
 # focus the last node/desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last
+	bspc node -f {prev,next}
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -142,4 +154,4 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
 	amixer set Master 5%+
 XF86AudioMute
-        amixer set Master toggle
+    amixer set Master toggle
