@@ -46,14 +46,14 @@ nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2
 # Installing Essential Programs
 nala install feh bspwm sxhkd alacrtty rofi polybar picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pavucontrol -y
 # Installing Other less important Programs
-nala install bpytop flameshot psmisc vim lxappearance papirus-icon-theme fonts-noto-color-emoji redshift -y
+nala install flameshot psmisc vim lxappearance papirus-icon-theme fonts-noto-color-emoji redshift -y
+# Installing System Utility Programs
+nala install bpytop stacer vim -y
+
 #install sddm locally
 dpkg -i deb-packages/sddm_0.19.0-4_amd64.deb
 nala update
 nala upgrade -y
-# Download Nordic Theme
-cd /usr/share/themes/
-git clone https://github.com/EliverLara/Nordic.git
 
 # Installing fonts
 cd $builddir

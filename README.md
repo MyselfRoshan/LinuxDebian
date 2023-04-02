@@ -323,3 +323,40 @@ $ tar -xjvf <filename>.tar.bz2
 ```shell
 $ tar -xjvf <filename>.tar.bz2 -C /path/to/destination/directory
 ```
+
+> ## For graphical compression programs list are as follows:
+
+- [File Roller](https://gitlab.gnome.org/GNOME/file-roller)
+
+```shell
+$ sudo nala install file-roller
+```
+
+- [Ark](https://github.com/KDE/ark)
+
+```shell
+$ sudo nala install ark
+```
+
+- [PeaZip](https://peazip.github.io/)
+  > For GTK version
+
+```shell
+$ wget "https://github.com/peazip/PeaZip/releases/download/9.1.0/peazip_9.1.0.LINUX.GTK2-1_amd64.deb"
+```
+
+Or
+
+> For Qt version
+
+```shell
+$ wget "https://github.com/peazip/PeaZip/releases/download/9.1.0/peazip_9.1.0.LINUX.Qt5-1_amd64.deb"
+```
+
+Then
+
+```shell
+$ cd ~/Dowloads
+$ dpkg -i peazip\*.deb
+
+```

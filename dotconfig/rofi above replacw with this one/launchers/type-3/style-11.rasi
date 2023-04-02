@@ -29,9 +29,7 @@ configuration {
 
 /*****----- Main Window -----*****/
 window {
-    // transparency:                "real";
-    // transparency:                "background";
-    // transparency:                real;
+    transparency:                "real";
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
@@ -44,11 +42,12 @@ window {
     padding:                     0px;
     border-radius:               15px;
     border-color:                @selected;
-    background-image:            url("~/.config/rofi/images/k.png",width);
     // background-color:            transparent;
     background-color:            #00000088;
     // background-color:            #0d878d1a;
     cursor:                      "default";
+    background-image:            url("~/.config/rofi/images/k.png",width);
+    font:                        var(font-icon);
 }
 
 /*****----- Main Box -----*****/
@@ -61,7 +60,7 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @selected;
     // border-color:                transparent;
-    background-color:            #00000048;
+    background-color:            #00000068;
     // background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 
@@ -70,6 +69,7 @@ mainbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
+    placeholder:                 "search...";
     spacing:                     10px;
     margin:                      0px;
     padding:                     15px;
@@ -160,6 +160,7 @@ element-icon {
     cursor:                      inherit;
 }
 element-text {
+    font:var(font-element);
     background-color:            transparent;
     text-color:                  inherit;
     highlight:                   inherit;
@@ -184,7 +185,4 @@ textbox {
     vertical-align:              0.5;
     horizontal-align:            0.0;
     highlight:                   none;
-    // text-outline:                true;
-    // text-outline-color:          #ffffff;
-    // text-outline-width:          3px;
 }
