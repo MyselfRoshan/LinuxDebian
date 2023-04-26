@@ -208,47 +208,60 @@ $ sudo tar xjf firefox-*.tar.bz2 -C /opt
 > Note: Above command will extract all files from firefox-\*.tar.bz2 to the /opt/firefox directory.
 
 - Create a soft link or symlink of **'firefox'** file under **'/usr/local/bin/'** directory, so it will be accessible from anywhere the system:
+  - For all users
+  ```shell
+  $ sudo ln -s /opt/firefox/firefox /usr/bin/firefox-developer-edition
+  ```
+  - For Single user with name **'Username'**
+  ```shell
+  $ sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox-developer-edition
+  ```
 
-```shell
-$ sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox-developer
-```
-
-> Note: You can use use any name instead of **firefox-developer** like **firefox-dev**
+> Note: You can use use any name instead of **firefox-developer-edition** like **firefox-dev**
 
 - Start **'Firefox Developer Edition'** from the terminal by running the following command:
 
 ```Shell
-$ sudo firefox-developer
+$ sudo firefox-developer-edition.desktop
 ```
 
 - Create an GUI executable to start **'Firefox Developer Edition'** from Application Launcher, Search, etc. :
 
-```Shell
-$ sudo nano home/<User Name>/.local/share/applications/firefox_developer.desktop
-```
+  - For all users
+
+  ```Shell
+  $ sudo nano usr/share/applications/firefox-developer-edition.desktop
+  ```
+
+  - For Single user with name **'Username'**
+
+  ```Shell
+  $ sudo nano home/<Username>/.local/share/applications/firefox-developer-edition.desktop
+  ```
 
 > ### Copy and paste the following text:
 
 ```desktop
 [Desktop Entry]
-Name=Firefox Stable
+Name=Firefox Developer Edition
+GenericName=Web Browser
 Comment=Web Browser
-Exec=/opt/firefox/firefox %u
-Terminal=false
-Type=Application
-Icon=/opt/firefox/browser/chrome/icons/default/default128.png
-Categories=Network;WebBrowser;
-MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;
+Exec=/usr/bin/firefox-developer-edition %U
 StartupNotify=true
-Actions=New;Private;
+Terminal=false
+Icon=firefox-developer-edition
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=application/pdf;application/rss+xml;application/rdf+xml;application/xhtml+xml;application/xhtml_xml;application/xml;application/vnd.mozilla.xul+xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;
+Actions=new-window;new-private-window;
 
-[Desktop Action New]
-Exec=/opt/firefox/firefox %u
-Name=Open in New Window
+[Desktop Action new-window]
+Name=New Window
+Exec=/usr/bin/firefox-developer-edition
 
-[Desktop Action Private]
-Exec=/opt/firefox/firefox --private-window %u
-Name=Open in Private Window
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Exec=/usr/bin/firefox-developer-edition --private-window
 
 ```
 
@@ -267,7 +280,12 @@ Name=Open in Private Window
 
 ---
 
-## Install bpytop real tme cli system monitor and neofetch important system information
+## Install system utilities tool
+
+bpytop - Cli Based system monitor
+stacer - System utility program
+reshift-gtk - Equivalent to f.lux in windows
+neofetch - shows system information
 
 ## Install nix best package manager
 
@@ -277,12 +295,8 @@ Name=Open in Private Window
 
 ## Install File light
 
-## Install with xcfce lightweight desktop environment
+## Install with xfce lightweight desktop environment (Optional)
 
-bpytop - Cli Based system monitor
-stacer - System utility program
-reshift-gtk - Equivalent to f.lux in windows
-neofetch - shows system information
 Install Material-Black-Pistachio-2.9.3 theme
 
 ## Some Linux Commands
@@ -301,8 +315,9 @@ $ apropos <keyword>
 $ whoami
 ```
 
-blkid
-fdisk
+- disk and partaition commands
+  blkid
+  fdisk
 
 ## Uncompress common linux file types
 
