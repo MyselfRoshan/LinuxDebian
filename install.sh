@@ -10,6 +10,7 @@ fi
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list
 
+# Creating username and builddir variable
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
@@ -31,6 +32,7 @@ mkdir -p /usr/share/sddm/themes
 mkdir -p /usr/share/backgrounds
 cp .Xresources /home/$username
 cp .Xnord /home/$username
+cp .zshrc /home/$username
 cp -R dotconfig/* /home/$username/.config/
 cp images/background.png /usr/share/backgrounds/
 mv user-dirs.dirs /home/$username/.config
@@ -43,23 +45,21 @@ git clone "https://framagit.org/MarianArlt/sddm-sugar-candy"
 git clone "https://github.com/MarianArlt/sddm-sugar-dark"
 
 # Installing sugar-candy dependencies
-nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
+nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2
 # Installing Essential Programs
-nala install feh bspwm sxhkd alacrtty rofi polybar picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pavucontrol
+nala install zsh bspwm sxhkd  rofi polybar picom alacrtty thunar lxpolkit x11-xserver-utils unzip yad wget pulseaudio pavucontrol
 # Installing Other less important Programs
-nala install flameshot psmisc vim lxappearance papirus-icon-theme fonts-noto-color-emoji redshift
+nala install  feh flameshot nitrogen psmisc vim lxappearance papirus-icon-theme fonts-noto-color-emoji redshift
 # Installing System Utility Programs
-nala install bpytop stacer vim -y
+nala install bpytop stacer -y
 
 # Installing material-black-pistachio
 cd $builddir
 unzip Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
 
 #install sddm
-rm -r sddm_*_amd64.deb
 wget ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb | sudo dpkg -i sddm_0.19.0-5_amd64.deb
-nala update
-nala upgrade -y
+rm -r sddm_*_amd64.deb
 
 # Installing fonts
 cd $builddir
@@ -88,6 +88,9 @@ curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update
 nala install brave-browser -y
+
+nala update
+nala upgrade -y
 # Enable graphical login and change target from CLI to GUI
 systemctl enable sddm
 systemctl set-default graphical.target
