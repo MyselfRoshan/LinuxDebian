@@ -10,6 +10,7 @@ fi
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list
 
+# Creating username and builddir variable
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
