@@ -5,8 +5,7 @@
 
 #Start polybar first
 bash ~/.config/polybar/launch.sh &
-# nitrogen --set-scaled /usr/share/backgrounds/background.png
-nitrogen --set-scaled /media/roshan/windows/Pictures/Wallpaper/b.jpg
+nitrogen --set-scaled /usr/share/backgrounds/background.png
 
 # Variable Defines
 color0=#3B4252
@@ -81,7 +80,8 @@ sleep 0.50
 urxvtc &
 lxpolkit &
 picom --config "$HOME/.config/bspwm/picom.conf" &
-flameshot &
-xfce4-clipman &
 synology-drive &
+flameshot &
+nm-applet &
+xfce4-clipman &
 bspc desktop -f ^1

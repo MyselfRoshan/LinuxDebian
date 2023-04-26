@@ -7,7 +7,7 @@ super + x
 	alacritty
 # program launcher
 super + r
-	/home/roshan/.config/rofi/scripts/launcher_t3
+	/home/roshan/.config/rofi/launchers/type-7/launcher.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -99,7 +99,7 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
+alt + {grave,Tab}
 	bspc node -f {prev,next}
 
 # focus the older or newer node in the focus history

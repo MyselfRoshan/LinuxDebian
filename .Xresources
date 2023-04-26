@@ -1,4 +1,4 @@
-
+Xcursor.theme: Night Diamond (Blue)
 Xft.dpi:                        96
 Xft.antialias:                  1
 Xft.autohint:                   1
@@ -6,9 +6,6 @@ Xft.hinting:                    true
 Xft.hintstyle:                  hintslight
 Xft.rgba:                       rgb
 Xft.lcdfilter:                  lcddefault
-
-!Default Cursor
-Xcursor.theme: Night Diamond (Blue)
 
 #define FONT Fira Code
 #define ICON FiraCode Nerd Font Mono
