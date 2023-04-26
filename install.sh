@@ -35,23 +35,29 @@ cp -R dotconfig/* /home/$username/.config/
 cp images/background.png /usr/share/backgrounds/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
-tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
+# Installing sddm and sugar theme
+# tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv /home/$username/.config/sddm.conf /etc/sddm.conf
-
-# Installing material-black-pistachio
-unzip Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
+cd /usr/share/sddm/themes
+git clone "https://framagit.org/MarianArlt/sddm-sugar-candy"
+git clone "https://github.com/MarianArlt/sddm-sugar-dark"
 
 # Installing sugar-candy dependencies
 nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 # Installing Essential Programs
-nala install feh bspwm sxhkd alacrtty rofi polybar picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pavucontrol -y
+nala install feh bspwm sxhkd alacrtty rofi polybar picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pavucontrol
 # Installing Other less important Programs
-nala install flameshot psmisc vim lxappearance papirus-icon-theme fonts-noto-color-emoji redshift -y
+nala install flameshot psmisc vim lxappearance papirus-icon-theme fonts-noto-color-emoji redshift
 # Installing System Utility Programs
 nala install bpytop stacer vim -y
 
-#install sddm locally
-dpkg -i deb-packages/sddm_0.19.0-4_amd64.deb
+# Installing material-black-pistachio
+cd $builddir
+unzip Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
+
+#install sddm
+rm -r sddm_*_amd64.deb
+wget ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb | sudo dpkg -i sddm_0.19.0-5_amd64.deb
 nala update
 nala upgrade -y
 
@@ -77,12 +83,11 @@ gzip -dc cursors/night-diamond-blue.tar.gz | tar -xvzf -
 mv "Night Diamond (Blue)" /usr/share/icons
 
 # Install brave-browser
-nala install apt-transport-https curl -y
+nala install curl
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update
 nala install brave-browser -y
-
 # Enable graphical login and change target from CLI to GUI
 systemctl enable sddm
 systemctl set-default graphical.target

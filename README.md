@@ -66,7 +66,13 @@ $ ip a #To view if wlp2s0b1 is UP or DOWN
 
 > Note: If this method doesn't work visit official wiki [here](https://wiki.debian.org/WiFi/HowToUse).
 
+---
+
 ## Install NetworkManager
+
+```shell
+sudo apt install network-manager
+```
 
 ---
 
@@ -352,9 +358,9 @@ $ sudo nala install file-roller
 
 - [Ark](https://github.com/KDE/ark)
 
-```shell
-$ sudo nala install ark
-```
+  ```shell
+  $ sudo nala install ark
+  ```
 
 - [PeaZip](https://peazip.github.io/)
   > For GTK version
