@@ -21,7 +21,7 @@ apt upgrade -y
 # Install nala
 apt install nala -y
 nala update
-nala upgrade
+nala upgrade -y
 # Making .config and Moving config files and background to Pictures
 cd $builddir
 mkdir -p /home/$username/.config
@@ -45,11 +45,11 @@ git clone "https://framagit.org/MarianArlt/sddm-sugar-candy"
 git clone "https://github.com/MarianArlt/sddm-sugar-dark"
 
 # Installing sugar-candy dependencies
-nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2
+nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 # Installing Essential Programs
-nala install zsh bspwm sxhkd  rofi polybar picom alacrtty thunar lxpolkit x11-xserver-utils unzip yad wget pulseaudio pavucontrol
+nala install zsh bspwm sxhkd rofi polybar picom alacritty thunar lxpolkit x11-xserver-utils unzip yad wget pulseaudio pavucontrol -y
 # Installing Other less important Programs
-nala install  feh flameshot nitrogen psmisc vim lxappearance papirus-icon-theme fonts-noto-color-emoji redshift
+nala install feh flameshot nitrogen psmisc vim mousepad lxappearance papirus-icon-theme fonts-noto-color-emoji redshift -y
 # Installing System Utility Programs
 nala install bpytop stacer -y
 
@@ -58,7 +58,8 @@ cd $builddir
 unzip Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
 
 #install sddm
-wget ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb | sudo dpkg -i sddm_0.19.0-5_amd64.deb
+wget 'ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb'
+dpkg -i sddm_0.19.0-5_amd64.deb
 rm -r sddm_*_amd64.deb
 
 # Installing fonts
