@@ -1,6 +1,6 @@
 #!/bin/bash
-BRIGHTNESS_VALUE=`brightnessctl | grep -o "(.*" | tr -d "()"`
-BRIGHTNESS_NR=${BRIGHTNESS_VALUE//%}
+BRIGHTNESS_VALUE=$(brightnessctl | grep -o "(.*" | tr -d "()")
+BRIGHTNESS_NR=${BRIGHTNESS_VALUE//%/}
 
 # if [ $BRIGHTNESS_NR -lt 20 ]; then
 # 	BRIGHTNESS_ICON=''

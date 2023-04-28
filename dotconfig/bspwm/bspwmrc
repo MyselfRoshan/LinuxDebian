@@ -5,15 +5,17 @@
 
 #Start polybar first
 bash ~/.config/polybar/launch.sh &
-nitrogen --set-scaled /usr/share/backgrounds/background.png
+nitrogen --set-scaled /usr/share/backgrounds/background.*
 
 # Variable Defines
-color0=#3B4252
+color1=#11a000
+color2=#11a7a7
+color3=#8BE9FD
 color4=#D8DEE9
 
 # Make sure sxhkd is always running
 while :; do
-    if pgrep -x sxhkd > /dev/null; then
+    if pgrep -x sxhkd >/dev/null; then
         true
     else
         sxhkd &
@@ -33,24 +35,25 @@ bspc config remove_disabled_monitors true
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 #BSPWM Config
-bspc config border_width        0
-bspc config top_padding         35
-bspc config right_padding       2
-bspc config left_padding        2
-bspc config bottom_padding      2
-bspc config window_gap          2
-bspc config top_monocle_padding  0
+bspc config border_width 1.5
+bspc config top_padding 30
+bspc config right_padding 2
+bspc config left_padding 2
+bspc config bottom_padding 2
+bspc config window_gap 3
+bspc config top_monocle_padding 0
 bspc config right_monocle_padding 0
 bspc config left_monocle_padding 0
 bspc config bottom_monocle_padding 0
 
-bspc config focused_border_color "$color0"
-bspc config normal_border_color  "$color0"
-bspc config active_border_color  "$color0"
+bspc config focused_border_color "$color1"
+bspc config normal_border_color "$color2"
+bspc config active_border_color "$color3"
 bspc config presel_feedback_color "$color4"
-bspc config split_ratio          0.50
-bspc config borderless_monocle   true
-bspc config gapless_monocle      false
+
+bspc config split_ratio 0.50
+bspc config borderless_monocle false
+bspc config gapless_monocle true
 bspc config focus_follows_pointer true
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules.sh"
 
@@ -60,14 +63,14 @@ bspc config external_rules_command "$HOME/.config/bspwm/external_rules.sh"
 # Search "Bare-bones window manager by Angad Sharma" on dev.to for more
 bspc rule -a Brave-browser desktop='^1' follow=on
 bspc rule -a firefox-aurora desktop='^1' follow=on
+bspc rule -a Lxappearance state=floating layer=normal center=true
 bspc rule -a Code desktop='^4' follow=on
 bspc rule -a Thunar desktop='^3' follow=on
-bspc rule -a Pavucontrol desktop='^7' follow=on
+bspc rule -a Pavucontrol desktop='^7' state=floating
 bspc rule -a Gimp desktop='^8' follow=on
 bspc rule -a wine desktop='^7' state=floating follow=on
 bspc rule -a yad state=floating follow=on
 bspc rule -a variety state=floating
-bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
@@ -76,12 +79,12 @@ bspc rule -a synergy desktop='^9'
 #Auto-Start
 bspc desktop -f ^9
 variety &
-sleep 0.50
+sleep 1
 urxvtc &
 lxpolkit &
-picom --config "$HOME/.config/bspwm/picom.conf" &
+picom --config "$HOME/.config/picom/picom.conf" &
 synology-drive &
 flameshot &
 nm-applet &
-xfce4-clipman &
+#xfce4-clipman &
 bspc desktop -f ^1
