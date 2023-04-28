@@ -41,7 +41,7 @@ git clone "https://github.com/MarianArlt/sddm-sugar-dark"
 # Installing sugar-candy dependencies
 nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 # Installing Essential Programs
-nala install bspwm sxhkd rofi polybar picom thunar lxpolkit x11-xserver-utils yad wget pulseaudio pavucontrol -y
+nala install bspwm sxhkd rofi polybar picom thunar lxpolkit x11-xserver-utils yad wget curl pulseaudio pavucontrol -y
 # Installing terminal (alacritty,terminator)
 nala install alacritty -y
 # Installing Other less important Programs
@@ -50,9 +50,12 @@ nala install vim mousepad flameshot psmisc lxappearance redshift brightnessctl u
 nala install bpytop stacer -y
 # Image viewer (feh,qimgv,ristretto,viewnior,nitrogen)
 nala install qimgv
-# Installing material-black-pistachio
+
+# Installing material-black-pistachio theme and Night diamond cursors
 cd $builddir
-unzip Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
+unzip Cursors_Themes/Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
+gzip -dc Cursors_Themes/night-diamond-blue.tar.gz | tar -xvzf -
+mv "Night Diamond (Blue)" /usr/share/icons
 
 #install sddm
 wget ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb
@@ -68,12 +71,7 @@ mv dotfonts/* /home/$username/.fonts/
 source scripts/nerdfonts.sh
 chown $username:$username /home/$username/.fonts/*
 
-# Install Nightly diamond cursors
-gzip -dc cursors/night-diamond-blue.tar.gz | tar -xvzf -
-mv "Night Diamond (Blue)" /usr/share/icons
-
 # Install brave-browser
-nala install curl
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update
