@@ -2,16 +2,25 @@
 
 ## Table Of Contents
 
+- [Tools To Make Bootable ISOs](#tools-to-make-bootable-isos)
 - [Installing debian without any desktop environment](#installing-debian-without-any-desktop-environment)
-- [Connect to wifi from command line](#connect-to-wifi-from-command-line)
-- [Change apt package source](#change-apt-package-source)
-- [Nala apt front-end for Linux](#install-nala-better-apt-front-end)
-- [Automatically download all firmware packages](#automatically-download-all-the-required-firmware-packages)
+  - [Connect to wifi from command line](#connect-to-wifi-from-command-line)
+  - [Change apt package source](#change-apt-package-source)
+  - [Nala apt front-end for Linux](#install-nala-better-apt-front-end)
+  - [Automatically download all firmware packages](#automatically-download-all-the-required-firmware-packages)
 - [Fix Grub dual boot problem](#fix-grub-dual-boot-problem)
 - [Install Firefox Developer Edition Browser](#install-firefox-developer-edition-browser)
 - [Uncompress Common linux file types](#uncompress-common-linux-file-types)
   - [Cli Compression Programs](#cli-compression-programs)
   - [Graphical Compression Programs](#graphical-compression-programs)
+
+---
+
+## Tools To Make Bootable ISOs :
+
+- [Ventoy](https://www.ventoy.net/en/download.html) (Recommended)
+- [Etcher](https://www.balena.io/etcher) (Beginner Friendly)
+- [Rufus](https://rufus.ie/en/)
 
 ---
 
@@ -21,54 +30,54 @@
 
 > ### Note: If you have ethernet connected for internet connection jump to next step [here](#change-apt-package-source).
 
-## Connect to wifi from command line
+### Connect to wifi from command line
 
 - Show all the available network interface
 
-```shell
-$ ip a
-```
+  ```shell
+  $ ip a
+  ```
 
 - Show your wireless network interface
 
-```shell
-$ sudo iw dev
-```
+  ```shell
+  $ sudo iw dev
+  ```
 
 - Set the wireless interface up which start with wlpxxx since mine is wlsps0b1, the command is:
 
-```shell
-$ sudo ip link set wlp2s0b1 up
-```
+  ```shell
+  $ sudo ip link set wlp2s0b1 up
+  ```
 
 - Edit the interfaces with your favourite text editor like vim, nano, etc. Since I am familier with nano for my setup.
 
-```shell
-$ sudo nano /etc/network/interfaces
-```
+  ```shell
+  $ sudo nano /etc/network/interfaces
+  ```
 
 - Copy and paste the following text at the end of the file and replace ESSID with your **'wifi name'** and PASSWORD with your **'wifi password'**
 
-```nano
-# my wifi device
-allow-hotplug wlp2s0b1
-iface wlp2s0b1 inet dhcp
-  wpa-ssid ESSID #wifi name/essid
-  wpa-psk PASSWORD #wifi password
-```
+  ```nano
+  # my wifi device
+  allow-hotplug wlp2s0b1
+  iface wlp2s0b1 inet dhcp
+    wpa-ssid ESSID #wifi name/essid
+    wpa-psk PASSWORD #wifi password
+  ```
 
 - Bring up your interface and verify connection :
 
-```shell
-$ sudo ifup wlp2s0b1
-$ ip a #To view if wlp2s0b1 is UP or DOWN
-```
+  ```shell
+  $ sudo ifup wlp2s0b1
+  $ ip a #To view if wlp2s0b1 is UP or DOWN
+  ```
 
 > Note: If this method doesn't work visit official wiki [here](https://wiki.debian.org/WiFi/HowToUse).
 
 ---
 
-## Install NetworkManager
+### Install NetworkManager
 
 ```shell
 sudo apt install network-manager
@@ -76,7 +85,7 @@ sudo apt install network-manager
 
 ---
 
-## Change apt package source
+### Change apt package source
 
 > This section is optional. If you want latest and greatest debian packages then changing the source from **'bulleye'** to either **'sid'** or **'testing'** is a great idea.
 
@@ -88,9 +97,9 @@ sudo apt install network-manager
 
 - For my setup I changed my sources in source.list from **'bulleye'** to **'sid'**.
 
-```shell
-$ sudo nano /etc/apt/source.list
-```
+  ```shell
+  $ sudo nano /etc/apt/source.list
+  ```
 
 > ### It will look similar to this ( Ignore the comments ) :
 
@@ -122,37 +131,37 @@ deb-src http://deb.debian.org/debian bullseye-updates main
 
 - After changing the source list **'update'** and **'upgrade'** your system :
 
-```shell
-$ sudo apt update && sudo apt upgrade
-```
+  ```shell
+  $ sudo apt update && sudo apt upgrade
+  ```
 
 ---
 
-## Install 'nala' better 'apt' front-end
+### Install 'nala' better 'apt' front-end
 
 - When it come to installing packages from apt it is a mess. When you are installing packages nala provides a better interfaces while installing packages. So it is my prefered way. I recommend nala to everyone. To install nala in debian use the following command:
 
-```shell
-$ sudo apt install nala
-```
+  ```shell
+  $ sudo apt install nala
+  ```
 
 > Note: If nala isn't installed from the above method. Click [here](https://gitlab.com/volian/nala/-/wikis/Installation) to vist nala official install wiki.
 
 ---
 
-## Automatically download all the required firmware packages
+### Automatically download all the required firmware packages
 
 - It is rather simple to download all the **'reqired'** and **'missing'** firmware packages inside Debian. For this we need to install **isenkram-cli** package.
 
-```shell
-$ sudo nala install isenkram-cli
-```
+  ```shell
+  $ sudo nala install isenkram-cli
+  ```
 
 - To install missing **'reqired'** and **'missing'** firmware packages run the following command:
 
-```shell
-$ sudo isenkram-autoinstall-firmware
-```
+  ```shell
+  $ sudo isenkram-autoinstall-firmware
+  ```
 
 > For more details visit [here](https://www.debian.org/releases/stable/i386/ch06s04.en.html).
 
@@ -179,7 +188,7 @@ $ sudo os-prober
 $ sudo update-grub
 ```
 
-> Note : If you cannot open your linux system then visit one ogf the following sites to install .iso files to fix boot
+> ### Note : If you cannot open your linux system then visit one ogf the following sites to install .iso files to fix boot
 
 - **`ARTICLES`**
   - [Grub Rescue](https://phoenixnap.com/kb/grub-rescue)
