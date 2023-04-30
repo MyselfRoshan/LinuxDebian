@@ -179,6 +179,19 @@ $ sudo os-prober
 $ sudo update-grub
 ```
 
+> Note : If you cannot open your linux system then visit one ogf the following sites to install .iso files to fix boot
+
+- **`ARTICLES`**
+  - [Grub Rescue](https://phoenixnap.com/kb/grub-rescue)
+  - [Grub Terminal](https://unix.stackexchange.com/questions/329926/grub-starts-in-command-line-after-reboot)
+- **`ISO`**
+  - [Rescatux & $uper Grub](https://www.supergrubdisk.org/)
+    - [SourceForge](https://sourceforge.net/projects/supergrub2/)
+    - [Github](https://github.com/supergrub/supergrub)
+  - [Boot Repair Disk](https://sourceforge.net/p/boot-repair-cd/home/Home/)
+  - [System Rescue](https://www.system-rescue.org/)
+  - [Kasperky Rescue Disk](https://www.kaspersky.co.in/downloads/free-rescue-disk)
+
 ---
 
 ## Install Firefox Developer Edition Browser
