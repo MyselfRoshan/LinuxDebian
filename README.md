@@ -177,16 +177,16 @@ $ sudo nano /etc/default/grub
 
 - Search and uncomment the following line :
 
-```nano
-GRUB_DISABLE_OS_PROBER=false
-```
+  ```nano
+  GRUB_DISABLE_OS_PROBER=false
+  ```
 
 - Run the following command to enable **'os prober'** and **'update grub'**. This will automatically detect your another operating system.
 
-```shell
-$ sudo os-prober
-$ sudo update-grub
-```
+  ```shell
+  $ sudo os-prober
+  $ sudo update-grub
+  ```
 
 > ### Note : If you cannot open your linux system then visit one ogf the following sites to install .iso files to fix boot
 
