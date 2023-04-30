@@ -199,7 +199,6 @@ $ sudo update-grub
     - [Github](https://github.com/supergrub/supergrub)
   - [Boot Repair Disk](https://sourceforge.net/p/boot-repair-cd/home/Home/)
   - [System Rescue](https://www.system-rescue.org/)
-  - [Kasperky Rescue Disk](https://www.kaspersky.co.in/downloads/free-rescue-disk)
 
 ---
 
