@@ -1,18 +1,23 @@
-# Installation Without Desktop Environment([Visual Tutorial](./VisualTutorial.md)/ [Article Style Tutorial](./ArticleStyleTutorial.md))
+# Table Of Contents
 
-## Table Of Contents
-
+- [Installation Without Desktop Environment](#installation-without-desktop-environment)
 - [Fix Grub dual boot problem](#fix-grub-boot-and-dual-boot-problem)
 - [Install Firefox Developer Edition Browser](#install-firefox-developer-edition-browser)
 - [Uncompress Common linux file types](#uncompress-common-linux-file-types)
   - [Cli Compression Programs](#cli-compression-programs)
   - [Graphical Compression Programs](#graphical-compression-programs)
 
+# Installation Without Desktop Environment
+
+- ### [Visual Tutorial](./VisualTutorial.md)
+
+- ### [Article Style Tutorial](./ArticleStyleTutorial.md)
+
 ---
 
 ## Fix Grub Boot And Dual Boot Problem
 
-### Fix Dual Boot When Linux Fail To Load Or Detect Other OS
+### Grub failed to load or detect other Operating System after 'System Update'
 
 - This problem occurs when you update and upgrade your system. A simple way to fix this is by following given commands:
 
@@ -29,13 +34,13 @@ $ sudo nano /etc/default/grub
 - Run the following command to enable **'os prober'** and **'update grub'**. This will automatically detect your another operating system.
 
   ```shell
-  $ sudo os-prober
-  $ sudo update-grub
-  # OR
-  $ sudo update-grub2
+  sudo os-prober
+  sudo update-grub
   ```
 
-> ### Note : If you cannot open your linux system then visit one ogf the following sites to install .iso files to fix boot
+### Other Grub related fixes
+
+`Visit following sites to fix grub related issues`
 
 - **`ARTICLES`**
   - [Grub Rescue](https://phoenixnap.com/kb/grub-rescue)
