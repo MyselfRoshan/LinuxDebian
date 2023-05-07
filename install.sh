@@ -28,7 +28,7 @@ mkdir -p /usr/share/backgrounds
 cp .Xresources /home/$username
 cp .Xnord /home/$username
 cp -R dotconfig/* /home/$username/.config/
-cp images/background.* /usr/share/backgrounds/
+cp images/background* /usr/share/backgrounds/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 # Installing sddm and sugar theme
