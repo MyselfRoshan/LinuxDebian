@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Firefox Developer Edition
+GenericName=Web Browser
+Comment=Web Browser
+Exec=/usr/bin/firefox-developer-edition %U
+StartupNotify=true
+Terminal=false
+Icon=firefox-developer-edition
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=application/pdf;application/rss+xml;application/rdf+xml;application/xhtml+xml;application/xhtml_xml;application/xml;application/vnd.mozilla.xul+xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=New Window
+Exec=/usr/bin/firefox-developer-edition
+
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Exec=/usr/bin/firefox-developer-edition --private-window

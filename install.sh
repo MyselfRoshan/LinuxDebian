@@ -21,7 +21,10 @@ apt upgrade -y
 # Install nala
 apt install -y nala
 # Making .config and moving config files and backgrounds
-cd "$builddir" || { echo "Directory LinuxDebian not found....."; exit 1; } 
+cd "$builddir" || {
+  echo "Directory LinuxDebian not found....."
+  exit 1
+}
 mkdir -p /home/"$username"/{.config,.fonts,.icons}
 mkdir -p /usr/share/sddm/themes
 mkdir -p /usr/share/backgrounds
@@ -34,48 +37,49 @@ chown -R "$username":"$username" /home/"$username"
 # Installing sddm and sugar theme
 # tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv /home/"$username"/.config/sddm.conf /etc/sddm.conf
-cd /usr/share/sddm/themes || { echo "Directory /usr/share/sddm/themes not found....."; exit 1; }
+cd /usr/share/sddm/themes || {
+  echo "Directory /usr/share/sddm/themes not found....."
+  exit 1
+}
 git clone "https://framagit.org/MarianArlt/sddm-sugar-candy"
 git clone "https://github.com/MarianArlt/sddm-sugar-dark"
 
-# Installing sugar-candy dependencies
-nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
-# Installing Essential Programs
-nala install bspwm sxhkd rofi polybar picom thunar lxpolkit x11-xserver-utils yad wget curl pulseaudio pavucontrol -y
 # Installing terminal (alacritty,terminator)
 nala install alacritty -y
 # Installing Other less important Programs
-nala install vim mousepad flameshot psmisc lxappearance redshift brightnessctl unzip -y
+nala install vim mousepad flameshot psmisc lxappearance redshift unzip -y
 # Installing System Utility Programs
 nala install bpytop stacer -y
 # Image viewer (feh,qimgv,ristretto,viewnior,nitrogen)
 nala install qimgv
 
 # Installing material-black-pistachio theme and Night diamond cursors
-cd "$builddir" || { echo "Directory LinuxDebian not found....."; exit 1; } 
+cd "$builddir" || {
+  echo "Directory LinuxDebian not found....."
+  exit 1
+}
 unzip Cursors_Themes/Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
 gzip -dc Cursors_Themes/night-diamond-blue.tar.gz | tar -xvzf -
 mv "Night Diamond (Blue)" /usr/share/icons
 
-#install sddm
-wget ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb
-dpkg -i sddm_0.19.0-5_amd64.deb
-rm -r sddm_*_amd64.deb
-
 # Installing fonts and icons
-cd "$builddir" || { echo "Directory LinuxDebian not found....."; exit 1; } 
+cd "$builddir" || {
+  echo "Directory LinuxDebian not found....."
+  exit 1
+}
 nala install fonts-font-awesome fonts-noto-color-emoji papirus-icon-theme -y
 mv dotfonts/* /home/"$username"/.fonts/
 
-#Installing nerd-fonts
-source scripts/nerdfonts.sh
+# Installing nerd-fonts
+# shellcheck source=/dev/null
+. scripts/nerdfonts.sh
 chown "$username":"$username" /home/"$username"/.fonts/*
 
-# Install brave-browser
-curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
-nala update
-nala install brave-browser -y
+# Install browsers
+# shellcheck source=/dev/null
+. scripts/brave-browser.sh
+# shellcheck source=/dev/null
+. scripts/FirefoxDevloperEdition/installer.sh
 
 # Enable graphical login and change target from CLI to GUI
 systemctl enable sddm
