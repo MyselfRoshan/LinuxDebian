@@ -75,12 +75,6 @@ mv dotfonts/* /home/"$username"/.fonts/
 . scripts/nerdfonts.sh
 chown "$username":"$username" /home/"$username"/.fonts/*
 
-# Install browsers
-# shellcheck source=/dev/null
-. scripts/brave-browser.sh
-# shellcheck source=/dev/null
-. scripts/FirefoxDevloperEdition/installer.sh
-
 # Enable graphical login and change target from CLI to GUI
 systemctl enable sddm
 systemctl set-default graphical.target

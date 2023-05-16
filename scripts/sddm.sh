@@ -32,11 +32,13 @@ echo
 echo "INSTALLING SDDM DISPLAY MANAGER"
 echo
 #install sddm
-SDDM_DEB="$(mktemp)" &&
-  wget -O "$SDDM_DEB" 'ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb' &&
-  sudo dpkg -i "$SDDM_DEB"
-rm -f "$SDDM_DEB"
-
+# SDDM_DEB="$(mktemp)" &&
+#   wget -O "$SDDM_DEB" 'ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb' &&
+#   sudo dpkg -i "$SDDM_DEB"
+# rm -f "$SDDM_DEB"
+#One liner
+# deb=$(curl -w "%{filename_effective}" -LO ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb) && dpkg -i "$deb" && rm "$deb" && unset deb
+dpkg -i <(wget --quiet --output-document=- ftp.us.debian.org/debian/pool/main/s/sddm/sddm_0.19.0-5_amd64.deb)
 echo
 echo "Done!"
 echo
