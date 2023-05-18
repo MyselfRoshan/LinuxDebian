@@ -1,5 +1,5 @@
 #!/bin/bash
-
+username=$(id -u -n 1000)
 mkdir -p ~/.fonts
 fonts=(
     "FiraCode"
@@ -17,3 +17,4 @@ for font in "${fonts[@]}" ; do
     rm "$font".zip
 done
 fc-cache -vf
+chown "$username":"$username" "$HOME"/.fonts/*

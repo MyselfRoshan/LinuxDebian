@@ -30,7 +30,7 @@ mkdir -p /usr/share/sddm/themes
 mkdir -p /usr/share/backgrounds
 cp .Xresources /home/"$username"
 cp .Xnord /home/"$username"
-cp -R dotconfig/* /home/"$username"/.config/
+cp -R .config/* /home/"$username"/.config/
 cp images/background* /usr/share/backgrounds/
 mv user-dirs.dirs /home/"$username"/.config
 chown -R "$username":"$username" /home/"$username"
@@ -54,19 +54,13 @@ nala install bpytop stacer -y
 nala install qimgv
 
 # Installing material-black-pistachio theme and Night diamond cursors
-cd "$builddir" || {
-  echo "Directory LinuxDebian not found....."
-  exit 1
-}
+cd "$builddir"
 unzip Cursors_Themes/Material-Black-Pistachio-2.9.4.zip -d /usr/share/themes
 gzip -dc Cursors_Themes/night-diamond-blue.tar.gz | tar -xvzf -
 mv "Night Diamond (Blue)" /usr/share/icons
 
 # Installing fonts and icons
-cd "$builddir" || {
-  echo "Directory LinuxDebian not found....."
-  exit 1
-}
+cd "$builddir"
 nala install fonts-font-awesome fonts-noto-color-emoji papirus-icon-theme -y
 mv dotfonts/* /home/"$username"/.fonts/
 
@@ -86,7 +80,6 @@ bash scripts/changeinterface
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to install zsh shell with oh-my-zsh (Y,n)? ' INSTZSH
 if [ "$INSTZSH" == "Y" ] || [ "$INSTZSH" == "y" ]; then
   nala install zsh -y
-  chsh -s /bin/zsh "$username"
   sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
   cp .zshrc /home/"$username"
 fi
