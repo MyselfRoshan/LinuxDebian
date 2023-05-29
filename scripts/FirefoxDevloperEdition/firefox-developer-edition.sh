@@ -9,12 +9,12 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-read -rep $'[\e[1;33mACTION\e[0m] Choose the following action for Firefox Developer Edition browser (1, 2 or 3) :
+read -rep $'\e[1;33mChoose the following action for Firefox Developer Edition browser (1, 2 or 3) :
 -------------------------------------------------------------------------------
 1. Install
 2. Update
 3. Uninstall
--------------------------------------------------------------------------------\n' FDE_ACTION
+-------------------------------------------------------------------------------\n\e[0m' FDE_ACTION
 
 if [ "$FDE_ACTION" == 1 ]; then
     nala install libgtk2.0-0 libasound2 libdbus-glib-1-2
