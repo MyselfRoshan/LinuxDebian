@@ -25,7 +25,7 @@ read -rep $'[\e[1;33mACTION\e[0m] Choose the following SDDM Theme options (1, 2 
 -------------------------------------------------------------------------------
 1. Sugar candy theme
 2. Corners
-
+4. 
 -------------------------------------------------------------------------------\n' SDDM_THEMES
 
 if [ "$SDDM_THEMES" == 1 ]; then
