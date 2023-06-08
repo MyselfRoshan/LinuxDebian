@@ -15,6 +15,7 @@ PKGS=(
   'bspwm'
   'brightnessctl'
   'curl'
+  'gvfs-backends'
   'lxpolkit'
   'pavucontrol'
   'picom'
